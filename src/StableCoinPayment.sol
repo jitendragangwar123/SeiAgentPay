@@ -63,7 +63,7 @@ contract StableCoinPayment {
     function payMerchant(address merchant, string memory stablecoin, uint256 amount) external {
         require(merchant != address(0), "Invalid merchant address");
         require(amount > 0, "Amount must be greater than zero");
-        
+
         bytes32 stablecoinKey = keccak256(abi.encodePacked(stablecoin));
         address tokenAddress = stablecoins[stablecoinKey];
         require(tokenAddress != address(0), "Unsupported stablecoin");
@@ -85,10 +85,10 @@ contract StableCoinPayment {
      */
     function updateStablecoinAddress(string memory stablecoin, address newAddress) external onlyAdmin {
         require(newAddress != address(0), "Invalid new address");
-        
+
         bytes32 stablecoinKey = keccak256(abi.encodePacked(stablecoin));
         require(stablecoins[stablecoinKey] != address(0), "Stablecoin not found");
-        
+
         stablecoins[stablecoinKey] = newAddress;
         emit StablecoinUpdated(stablecoin, newAddress);
     }
@@ -101,7 +101,7 @@ contract StableCoinPayment {
     function changeAdmin(address newAdmin) external onlyAdmin {
         require(newAdmin != address(0), "Invalid new admin");
         require(newAdmin != admin, "New admin must be different");
-        
+
         admin = newAdmin;
         emit AdminUpdated(newAdmin);
     }

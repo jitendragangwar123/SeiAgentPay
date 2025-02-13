@@ -8,7 +8,7 @@ import {USDT} from "../src/USDT.sol";
 import {USDC} from "../src/USDC.sol";
 
 contract DeployStableCoinPayment is Script {
-    function run() public returns (StableCoinPayment,DAI,USDT,USDC) { 
+    function run() public returns (StableCoinPayment, DAI, USDT, USDC) {
         vm.startBroadcast();
 
         DAI dai = new DAI();
@@ -24,6 +24,6 @@ contract DeployStableCoinPayment is Script {
         console.log("StableCoinPayment deployed at:", address(paymentContract));
 
         vm.stopBroadcast();
-        return (paymentContract,dai,usdt,usdc);
+        return (paymentContract, dai, usdt, usdc);
     }
 }

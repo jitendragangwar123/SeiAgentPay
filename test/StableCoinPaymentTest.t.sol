@@ -28,40 +28,40 @@ contract StableCoinPaymentTest is Test {
 
         paymentContract = new StableCoinPayment(address(dai), address(usdt), address(usdc));
 
-        dai.transfer(user, 1000 * 10**6);
-        usdt.transfer(user, 1000 * 10**6);
-        usdc.transfer(user, 1000 * 10**6);
+        dai.transfer(user, 1000 * 10 ** 6);
+        usdt.transfer(user, 1000 * 10 ** 6);
+        usdc.transfer(user, 1000 * 10 ** 6);
     }
 
     function test_Payment_Success() public {
         vm.startPrank(user);
-        dai.approve(address(paymentContract), 500 * 10**6);
-        paymentContract.payMerchant(merchant, "DAI", 500 * 10**6);
+        dai.approve(address(paymentContract), 500 * 10 ** 6);
+        paymentContract.payMerchant(merchant, "DAI", 500 * 10 ** 6);
         vm.stopPrank();
 
-        assertEq(dai.balanceOf(merchant), 500 * 10**6);
+        assertEq(dai.balanceOf(merchant), 500 * 10 ** 6);
     }
 
     function test_Revert_When_UnsupportedStablecoin() public {
         vm.startPrank(user);
-        dai.approve(address(paymentContract), 500 * 10**6);
+        dai.approve(address(paymentContract), 500 * 10 ** 6);
         vm.expectRevert("Unsupported stablecoin");
-        paymentContract.payMerchant(merchant, "INVALID", 500 * 10**6);
+        paymentContract.payMerchant(merchant, "INVALID", 500 * 10 ** 6);
         vm.stopPrank();
     }
 
     function test_Revert_When_InsufficientBalance() public {
         vm.startPrank(user);
-        dai.approve(address(paymentContract), 5000 * 10**6); 
+        dai.approve(address(paymentContract), 5000 * 10 ** 6);
         vm.expectRevert("Insufficient balance");
-        paymentContract.payMerchant(merchant, "DAI", 5000 * 10**6);
+        paymentContract.payMerchant(merchant, "DAI", 5000 * 10 ** 6);
         vm.stopPrank();
     }
 
     function test_Revert_When_InsufficientAllowance() public {
         vm.startPrank(user);
         vm.expectRevert("Insufficient allowance");
-        paymentContract.payMerchant(merchant, "DAI", 500 * 10**6); 
+        paymentContract.payMerchant(merchant, "DAI", 500 * 10 ** 6);
         vm.stopPrank();
     }
 
