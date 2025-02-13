@@ -1,66 +1,38 @@
-## Foundry
+# 🚀 SeiAgentPay  
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## 📌 Problem Statement  
+Traditional payment systems lack transparency, efficiency, and security, especially when it comes to stablecoin payments. Businesses and users face challenges such as:  
+⚡ High transaction fees  
+🔗 Lack of interoperability  
+🐢 Slow processing times  
 
-Foundry consists of:
+## 💡 Solution  
+**SeiAgentPay** is a **decentralized stablecoin payment system** that allows users to make payments seamlessly using **DAI, USDT, and USDC**. It integrates an **AI-powered recommendation system** to suggest the best stablecoin based on transaction history and user behavior, ensuring **cost-effective and efficient** transactions.  
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## ✨ Features  
+✅ **🔍 Stablecoin Recommendation** – AI-powered system to suggest the best stablecoin for payments.  
+✅ **💰 Multi-Stablecoin Support** – Supports **DAI, USDT, and USDC** transactions.  
+✅ **🔐 Secure Transactions** – Trustless and transparent payments using **smart contracts**.  
+✅ **🏪 Merchant Payments** – Enables **direct stablecoin transfers** to merchants.  
+✅ **⚡ Fast & Low-Cost** – Built on **Sei Network** for **high-speed** and **low-fee** transactions.  
+✅ **🔧 Admin Control** – Allows updating stablecoin addresses and managing settings securely.  
 
-## Documentation
+## 🚀 Getting Started  
+```sh  
+# 🛠 Clone the repository  
+git clone https://github.com/jitendragangwar123/SeiAgentPay 
+cd SeiAgentPay  
 
-https://book.getfoundry.sh/
+# 📦 Install dependencies  
+npm install  
 
-## Usage
+# ▶️ Run the frontend  
+npm run dev  
+```  
 
-### Build
+## 🤝 Contributing  
+We welcome contributions from the community! 🌍  
+Feel free to **open issues**, **submit pull requests**, or **suggest new features**.  
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## 📜 License  
+This project is licensed under the **MIT License**. 📝  
