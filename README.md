@@ -67,7 +67,7 @@ python main.py
 
 ### **5️⃣ Install Frontend Dependencies**  
 ```sh  
-cd frontend  
+cd front-end  
 npm install  
 ```
 
