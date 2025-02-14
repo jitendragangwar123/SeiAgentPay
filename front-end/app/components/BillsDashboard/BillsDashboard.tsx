@@ -42,7 +42,7 @@ function BillsDashboard() {
 
   const handlePayClick = () => {
     setModalData({
-      conversionRate: `1 USD ≈ 1 ${stablecoin}`,
+      conversionRate: `1 USD ≈ 1`,
     });
   };
 
