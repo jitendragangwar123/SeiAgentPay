@@ -46,7 +46,7 @@ cd SeiAgentPay
 
 ### **2️⃣ Install Backend Dependencies**  
 ```sh  
-cd backend  
+cd stablecoin-recommender
 pip install -r requirements.txt  
 ```
 
@@ -61,7 +61,7 @@ This generates updated **.pkl** model files and user transaction history.
 
 ### **4️⃣ Run the Backend API**  
 ```sh  
-python server.py  
+python main.py  
 ```
 
 
