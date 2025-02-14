@@ -94,3 +94,6 @@ Feel free to **open issues**, **submit pull requests**, or **suggest new feature
 
 ## 📜 License  
 This project is licensed under the **MIT License**. 📝  
+
+## Contact Us
+Please reach out to us at rajeebk.malik@gmail.com or jitendragangwar2498@gmail.com
